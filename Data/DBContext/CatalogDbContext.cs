@@ -12,7 +12,7 @@ namespace Data.DBContext
 
     public class CatalogDbContext : DbContext
     {
-        public DbSet<Product> Products { get; set; } = null!;
+        public DbSet<ProductDto> Products { get; set; } = null!;
         public DbSet<CatalogBrand> CatalogBrands { get; set; } = null!;
         public DbSet<CatalogType> CatalogTypes { get; set; } = null!;
 

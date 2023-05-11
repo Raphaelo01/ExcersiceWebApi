@@ -13,6 +13,6 @@ namespace Data.Entities
         public int CatalogBrandId { get; set; }
      
         public string? Name { get; set; }
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<ProductDto> Products { get; set; }
     }
 }

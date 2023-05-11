@@ -16,7 +16,7 @@ namespace Data.Services
         public async Task AddProduct(ProductDTO product)
         {
            // _context.Set<Product>().AddAsync(new produc)
-            await _context.Products.AddAsync(new Product() { 
+            await _context.Products.AddAsync(new ProductDto() { 
             AvailableStock= product.AvailableStock,
             Name= product.Name,
             Description= product.Description,
@@ -37,9 +37,11 @@ namespace Data.Services
             _context.Remove(entity);  
         }
 
-        public async Task<ProductDTO> GetProduct(int employeeId)
+        public async Task<ProductDTO?> GetProduct(int employeeId)
         {
             var result= await _context.Products.FirstOrDefaultAsync(p => p.Id == employeeId);
+            if (result == null)
+                return null;
             return new ProductDTO()
             {   Name=result.Name,
             Price=result.Price, 
@@ -91,6 +93,7 @@ namespace Data.Services
             productBase.MaxStockThreshold=Product.MaxStockThreshold;
             productBase.Name = Product.Name;
             _context.Entry(productBase).State= EntityState.Modified;
+
 
         }
     }

@@ -7,7 +7,7 @@ namespace Data.Services
     {
         Task<IEnumerable<ProductDTO>> GetProductsAsync();
 
-        public  Task<ProductDTO?> GetProduct(int ProductId);
+        public  Task<ProductDTO> GetProduct(int ProductId);
 
          public Task DeleteProduct(int ProductId); 
         public Task UpdateProduct(int ProductId, ProductDTO Product);

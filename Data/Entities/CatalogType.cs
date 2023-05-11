@@ -15,6 +15,6 @@ namespace Data.Entities
         [Key]
         public int CatalogTypeId { get; set; }
         public string Name { get; set; }
-        public virtual ICollection<Product> Products { get; set; }
+        public virtual ICollection<ProductDto> Products { get; set; }
     }
 }

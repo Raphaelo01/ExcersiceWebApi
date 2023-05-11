@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Data.Entities
 {
-    public class Product
+    public class ProductDto
     {
         [Required]
         [Key]

@@ -3,6 +3,7 @@ using Data.Services;
 using Microsoft.EntityFrameworkCore;
 using ONIS.Business.Interfaces;
 using ONIS.Business.Services;
+using Serilog;
 
 namespace Exercice1
 {
@@ -11,7 +12,7 @@ namespace Exercice1
         public static IServiceCollection RegisterBusinessServices(
             this IServiceCollection services)
         {
-            
+
             return services;
         }
 
@@ -27,10 +28,13 @@ namespace Exercice1
             services.AddScoped<IProductService, ProductService>();
             // register the repository
             services.AddScoped<IProductCatalogRepository, ProductCatalogRepository>();
-           
-           // DependencyContainer.AddONISServicesProduct(services);
 
-           
+            //AddSerilog
+            services.AddLogging(logger => logger.AddSerilog());
+
+
+
+
             return services;
         }
     }

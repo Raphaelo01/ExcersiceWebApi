@@ -20,9 +20,11 @@ namespace ONIS.Business.Services
         public async ValueTask DeleteProduct(int ProductID)
         {
            await _productRepository.DeleteProduct(ProductID);
+            await _productRepository.SaveChangesAsync();
+
         }
 
-        public async ValueTask<ProductDTO> GetProductById(int id)
+        public async ValueTask<ProductDTO?> GetProductById(int id)
         {
            return await _productRepository.GetProduct(id);
         }
@@ -36,6 +38,7 @@ namespace ONIS.Business.Services
         public async ValueTask UpdateProduct(int idProduct,ProductDTO ProductDTO)
         {
            await _productRepository.UpdateProduct(idProduct, ProductDTO);   
+           await _productRepository.SaveChangesAsync(); 
         }
 
         

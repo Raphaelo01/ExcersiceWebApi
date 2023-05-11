@@ -23,6 +23,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Data\Data.csproj" />
     <ProjectReference Include="..\ONIS.Business\ONIS.Business.csproj" />
+    <ProjectReference Include="..\ONIS.Shared.Logger\ONIS.Shared.Logger.csproj" />
   </ItemGroup>
 
 </Project>
