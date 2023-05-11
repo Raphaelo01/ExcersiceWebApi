@@ -1,6 +1,7 @@
 # Excersice Web API (Draft)
 
-    This is a little example of endpoint using .NET 7 (this code is on development maybe you get some errors when you start testing)
+    This is a little example of endpoint using .NET 7 
+    (this code is on development maybe you get some errors when you start testing)
 
 ## Features
 
