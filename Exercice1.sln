@@ -13,7 +13,36 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductCatalogTest", "Produ
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{E23FC9BA-0979-4DC5-93EF-77ABF9FB8ACF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ONIS.Shared.Logger", "ONIS.Shared.Logger\ONIS.Shared.Logger.csproj", "{FDB3429E-3DFB-4C79-AB7C-EFB4629343A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ONIS.Shared.Logger", "ONIS.Shared.Logger\ONIS.Shared.Logger.csproj", "{FDB3429E-3DFB-4C79-AB7C-EFB4629343A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APIs", "APIs", "{8D3B3B58-6FC5-488F-8550-67A21A9C3207}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ONIS.API.Catalog", "ONIS.API.Catalog\ONIS.API.Catalog.csproj", "{8FCA9A58-2C05-4A98-BDEE-C3C87BB2F154}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionTool", "SolutionTool", "{592F3095-5D18-4FAC-8B45-9EA7BD89BAFA}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yaml = docker-compose.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{25225E71-0B0C-4A5E-B218-9764BB9BAB8F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mongodb", "mongodb", "{A41FF3B9-6FEF-4A20-9028-831ABE8364CB}"
+	ProjectSection(SolutionItems) = preProject
+		tools\mongodb\mongo-init.js = tools\mongodb\mongo-init.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mssql", "mssql", "{EE07AFA7-D8B0-4FAF-B669-AED8F4022658}"
+	ProjectSection(SolutionItems) = preProject
+		tools\mssql\Catalog.mdf = tools\mssql\Catalog.mdf
+		tools\mssql\Catalog_log.ldf = tools\mssql\Catalog_log.ldf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mysql", "mysql", "{21D3B330-15A8-45F4-A406-2E6C9D876784}"
+	ProjectSection(SolutionItems) = preProject
+		tools\mysql\init.sql = tools\mysql\init.sql
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ONIS.Shared.ErrorHandlers", "ONIS.Shared.ErrorHandlers\ONIS.Shared.ErrorHandlers.csproj", "{C4FC3B8C-F17A-4471-A736-C6F8B08FC040}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,12 +70,26 @@ Global
 		{FDB3429E-3DFB-4C79-AB7C-EFB4629343A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDB3429E-3DFB-4C79-AB7C-EFB4629343A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDB3429E-3DFB-4C79-AB7C-EFB4629343A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FCA9A58-2C05-4A98-BDEE-C3C87BB2F154}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FCA9A58-2C05-4A98-BDEE-C3C87BB2F154}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FCA9A58-2C05-4A98-BDEE-C3C87BB2F154}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FCA9A58-2C05-4A98-BDEE-C3C87BB2F154}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4FC3B8C-F17A-4471-A736-C6F8B08FC040}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4FC3B8C-F17A-4471-A736-C6F8B08FC040}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4FC3B8C-F17A-4471-A736-C6F8B08FC040}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4FC3B8C-F17A-4471-A736-C6F8B08FC040}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FDB3429E-3DFB-4C79-AB7C-EFB4629343A4} = {E23FC9BA-0979-4DC5-93EF-77ABF9FB8ACF}
+		{8FCA9A58-2C05-4A98-BDEE-C3C87BB2F154} = {8D3B3B58-6FC5-488F-8550-67A21A9C3207}
+		{25225E71-0B0C-4A5E-B218-9764BB9BAB8F} = {592F3095-5D18-4FAC-8B45-9EA7BD89BAFA}
+		{A41FF3B9-6FEF-4A20-9028-831ABE8364CB} = {25225E71-0B0C-4A5E-B218-9764BB9BAB8F}
+		{EE07AFA7-D8B0-4FAF-B669-AED8F4022658} = {25225E71-0B0C-4A5E-B218-9764BB9BAB8F}
+		{21D3B330-15A8-45F4-A406-2E6C9D876784} = {25225E71-0B0C-4A5E-B218-9764BB9BAB8F}
+		{C4FC3B8C-F17A-4471-A736-C6F8B08FC040} = {E23FC9BA-0979-4DC5-93EF-77ABF9FB8ACF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D6BDF76B-9201-4274-B8B6-E8474113B08D}
